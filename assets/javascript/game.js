@@ -20,6 +20,11 @@ if (userGuess == computerGuess) {
     alert('Good Job Detective! You Win!')
     break;
 }
+else if (guessesLeft == 0) {
+    losses++;
+    alert('Oh No! Looks like you need more training.')
+    break;
+}
 }
 
 
