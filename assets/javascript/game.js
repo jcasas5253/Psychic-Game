@@ -18,17 +18,37 @@ guessesSoFar.push(userGuess);
 if (userGuess == computerGuess) {
     wins++;
     alert('Good Job Detective! You Win!')
-    break;
+    guessesLeft = 10;
+    guessesSoFar.length = 0;
 }
 else if (guessesLeft == 0) {
     losses++;
     alert('Oh No! Looks like you need more training.')
-    break;
+    guessesLeft = 10;
+    guessesSoFar.length = 0;
 }
 else if (userGuess !== computerGuess){
     guessesLeft--;
 }
+
+// Displaying the numbers in HTML    
+var html = "<p>Total Wins: " + 
+ wins + 
+"</p>" +
+ "<p>Total Losses: " + 
+losses + 
+ "</p>" +
+"<p>Guesses Left: " + 
+ guessesLeft + 
+ "</p>" +
+ "<p>Your Guesses so far: " +
+ guessesSoFar +
+ "</p>"
+ ;
+ // Placing the HTML into the game
+ document.querySelector('#game').innerHTML = html;
 }
+
 
 
 
