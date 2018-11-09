@@ -22,6 +22,7 @@ guessesSoFar.push(userGuess);
 if (userGuess == computerGuess) {
     wins++;
     alert('Good Job Detective! You Win!')
+    winner.play();
     guessesLeft = 10;
     guessesSoFar.length = 0;
 }
@@ -29,6 +30,7 @@ if (userGuess == computerGuess) {
 else if (guessesLeft == 0) {
     losses++;
     alert('Oh No! Looks like you need more training.')
+    looser.play();
     guessesLeft = 10;
     guessesSoFar.length = 0;
 }
