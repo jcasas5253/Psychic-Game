@@ -25,6 +25,9 @@ else if (guessesLeft == 0) {
     alert('Oh No! Looks like you need more training.')
     break;
 }
+else if (userGuess !== computerGuess){
+    guessesLeft--;
+}
 }
 
 
