@@ -12,6 +12,8 @@ document.onkeyup = function(event) {
 var computerGuess = computerChoices[Math.floor(Math.random()*computerChoices.length)];
 //case sensetive
 var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+//pushing user guesses to the users guesses thus far
+guessesSoFar.push(userGuess);
 }
 
 
