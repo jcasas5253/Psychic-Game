@@ -14,6 +14,12 @@ var computerGuess = computerChoices[Math.floor(Math.random()*computerChoices.len
 var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 //pushing user guesses to the users guesses thus far
 guessesSoFar.push(userGuess);
+
+if (userGuess == computerGuess) {
+    wins++;
+    alert('Good Job Detective! You Win!')
+    break;
+}
 }
 
 
